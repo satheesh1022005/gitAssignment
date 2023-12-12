@@ -1,0 +1,88 @@
+From 1b075a441f436a1b602f2b488efca1f3b6a093da Mon Sep 17 00:00:00 2001
+From: satheesh1022005 <satheesh1022005@gmail.com>
+Date: Tue, 12 Dec 2023 09:53:42 +0530
+Subject: [PATCH 1/3] changes in new_feature_branch
+
+---
+ angel/randome-pick-index.java | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 angel/randome-pick-index.java
+
+diff --git a/angel/randome-pick-index.java b/angel/randome-pick-index.java
+new file mode 100644
+index 0000000..f6fd8d0
+--- /dev/null
++++ b/angel/randome-pick-index.java
+@@ -0,0 +1 @@
++"Change from Branch 1" 
+-- 
+2.42.0.windows.2
+
+
+From abd8e31af1f3597701dfc676bf08d9c70c5fa67a Mon Sep 17 00:00:00 2001
+From: satheesh1022005 <satheesh1022005@gmail.com>
+Date: Tue, 12 Dec 2023 09:57:16 +0530
+Subject: [PATCH 2/3] changes newone
+
+---
+ angel/random-pick-index.java | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+ create mode 100644 angel/random-pick-index.java
+
+diff --git a/angel/random-pick-index.java b/angel/random-pick-index.java
+new file mode 100644
+index 0000000..c82c755
+--- /dev/null
++++ b/angel/random-pick-index.java
+@@ -0,0 +1,27 @@
++class Solution {
++    
++    Map<Integer, List<Integer>> map;
++    Random rand;
++    
++    public Solution(int[] nums) {
++        map = new HashMap<>();
++        rand = new Random();
++        List<Integer> list;
++        for(int i=0;i<nums.length;i++){
++            list = map.getOrDefault(nums[i], new ArrayList<Integer>());
++            list.add(i);
++            map.put(nums[i], list);
++        }
++    }
++    
++    public int pick(int target) {
++        List<Integer> list = map.get(target);
++        return list.get(rand.nextInt(list.size()));
++    }
++}
++
++/**
++ * Your Solution object will be instantiated and called as such:
++ * Solution obj = new Solution(nums);
++ * int param_1 = obj.pick(target);
++ */"changes in newone" 
+-- 
+2.42.0.windows.2
+
+
+From ca63bd21f06fa640972e83bef608c46a9593ec35 Mon Sep 17 00:00:00 2001
+From: satheesh1022005 <satheesh1022005@gmail.com>
+Date: Tue, 12 Dec 2023 14:14:57 +0530
+Subject: [PATCH 3/3] new change
+
+---
+ myfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfile.txt
+
+diff --git a/myfile.txt b/myfile.txt
+new file mode 100644
+index 0000000..65192d4
+--- /dev/null
++++ b/myfile.txt
+@@ -0,0 +1 @@
++"New change" 
+-- 
+2.42.0.windows.2
+
